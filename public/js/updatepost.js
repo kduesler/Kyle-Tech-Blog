@@ -1,4 +1,4 @@
-const { update } = require("../../models/User");
+// const { update } = require("../../models/User");
 
 const delButtonHandler = async (event) => {
     event.preventDefault();
@@ -21,9 +21,9 @@ const delButtonHandler = async (event) => {
 
 const updateFormHandler = async (event) => {
   event.preventDefault();
-
   const title = document.querySelector('#post-title').value.trim();
   const content = document.querySelector('#post-content').value.trim();
+
 
   if (event.target.hasAttribute('post_id')) {
     const id = event.target.getAttribute('post_id');
