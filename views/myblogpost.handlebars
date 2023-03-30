@@ -1,0 +1,26 @@
+<div class="row mb-2">
+      <div class="col-md-8">
+        <h4>{{blogPost.title}}</h4>
+        <p>{{blogPost.contents}}</p>
+      </div>
+    </div>
+
+    <form class="form update-post-form">
+        <input type="hidden">
+      <div class="form-group">
+        <label for="post-title">post title:</label>
+        <input class="form-input" type="text" id="post-title" name="post-title" value="{{blogPost.title}}"/>
+      </div>
+    
+      <div class="form-group">
+        <label for="post-content">post content:</label>
+        <textarea class="form-input" id="post-content" name="post-content"  value="{{blogPost.contents}}">{{blogPost.contents}}</textarea>
+      </div>
+      
+      <div class="form-group">
+        <button type="button" class="btn btn-primary update-btn id="post_id" value="{{blogPost.id}}"">Update</button>
+        <button type="button" class="btn btn-primary delete-btn id="post_id" value="{{blogPost.id}}"">DELETE</button>
+      </div>
+    </form>
+
+    <script src="./js/updatepost.js"></script>
