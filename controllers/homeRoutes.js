@@ -9,11 +9,14 @@ router.get('/', async (req, res) => {
           {
             model: User,
           },
+          {
+            model: Comment
+          }
         ],
       });
     
       const blogposts = blogData.map((blogpost) => blogpost.get({ plain: true }));
-  
+  console.log(blogposts);
       res.render('homepage', { 
         blogposts, 
         logged_in: req.session.logged_in 

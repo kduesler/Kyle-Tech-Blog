@@ -7,7 +7,7 @@ const newCommentFormHandler = async (event) => {
     window.location.toString().split("/").length - 1
   ];
 
-  const response = await fetch(`/api/comments`, {
+  const response = await fetch(`/api/comments/`, {
     method: "POST",
     body: JSON.stringify({
       comment,
@@ -17,10 +17,9 @@ const newCommentFormHandler = async (event) => {
       "Content-Type": "application/json",
     },
   });
-
   if (response.ok) {
-    console.log(response);
     document.location.reload();
+
   } else {
     alert("Failed to create comment");
   }

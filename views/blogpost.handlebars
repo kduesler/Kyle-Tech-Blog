@@ -3,8 +3,8 @@
   <p>{{blogPost.contents}}</p>
   <p>Created by {{blogPost.user.username}}</p>
   <p>{{format_date blogPost.updatedAt}}</p>
-{{#each comments}}
-<p>Comments here</p>
+{{#each blogPost}}
+<p>{{comment.comment}}</p>
 {{/each}}
   
 </div>
@@ -27,3 +27,5 @@
       </div>
     </form>
   </div>
+
+  <script src="/js/comment.js"></script>
