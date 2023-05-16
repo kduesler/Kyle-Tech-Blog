@@ -11,11 +11,17 @@ router.get("/:id", async (req, res) => {
         },
         {
           model: Comment,
-        }
+          include: [
+            {
+              model: User,
+            },
+          ],
+        },
       ],
     });
 
     const blogPost = blogData.get({ plain: true });
+    console.log(blogPost);
 
     res.render("blogpost", {
       blogPost,
