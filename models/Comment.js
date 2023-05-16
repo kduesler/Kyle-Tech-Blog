@@ -19,7 +19,7 @@ Comment.init(
       allowNull: false,
       references: {
         model: 'user',
-        key: 'key'
+        key: 'id'
       }
     },
     blog_id: {
@@ -27,7 +27,7 @@ Comment.init(
       allowNull: false,
       references: {
         model: 'blogpost',
-        key: 'key'
+        key: 'id'
       }
     }
   },
